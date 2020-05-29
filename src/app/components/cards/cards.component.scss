@@ -1,0 +1,20 @@
+.cards {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    mat-card {
+        width: 20%;
+        margin: 0 2rem 2rem 0;
+        flex: 1 1 20%;
+    }
+    &__item {
+        .cards__image {
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: auto;
+                margin: auto;
+            }
+        }
+    }
+}

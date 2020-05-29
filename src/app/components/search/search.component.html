@@ -1,0 +1,8 @@
+<form class="search">
+    <mat-form-field class="search__field">
+        <input type="text" placeholder="Buscar una palabra" #word (keyup)="search(word.value)" aria-label="Number" matInput [formControl]="searchForm">
+        <mat-icon aria-hidden="false">search</mat-icon>
+    </mat-form-field>
+</form>
+
+<app-cards [items]="tweets"></app-cards>

@@ -1,0 +1,11 @@
+@import '../../../../scss/variables.scss';
+mat-toolbar {
+    background-color: $blue;
+    .navbar {
+        width: 4rem;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
