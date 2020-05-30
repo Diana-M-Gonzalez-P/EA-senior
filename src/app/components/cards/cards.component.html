@@ -1,4 +1,4 @@
-<section class="cards">
+<section class="cards" infiniteScroll [infiniteScrollDistance]="0.5" (scrolled)="scroll">
     <mat-card class="cards__item" *ngFor="let item of items">
         <mat-card-header>
             <div mat-card-avatar class="cards__image">
@@ -9,17 +9,22 @@
         </mat-card-header>
         <mat-card-content>
             <p>
-                {{item.full_text}}
+                {{item.full_text | slice:0:20}}...
             </p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <button (click)="clickFavorite(item)" [ngClass]="{'favorite': item.classFavorites == true }">
                 <mat-icon>favorite</mat-icon>
             </button>
-            <button mat-button>Ver mas</button>
-            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <button mat-button (click)="clickView(item)">Ver mas</button>
+            <button (click)="clickShare(item)" [ngClass]="{'share': item.classShare == true }">
                 <mat-icon>share</mat-icon>
             </button>
         </mat-card-actions>
+        <div class="cards__full-text" [ngClass]="{'view': item.classActive == true }">
+            <p>
+                {{item.full_text}}
+            </p>
+        </div>
     </mat-card>
 </section>

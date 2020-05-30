@@ -1,8 +1,18 @@
-<form class="search">
+<form class="search" [formGroup]="searchForm" #form="ngForm">
     <mat-form-field class="search__field">
-        <input type="text" placeholder="Buscar una palabra" #word (keyup)="search(word.value)" aria-label="Number" matInput [formControl]="searchForm">
+        <input type="text" placeholder="Buscar una palabra" #word (keyup)="validateForm( form ); search(word.value)" matInput formControlName="search" [ngClass]="{ 'is-invalid': formS.search.errors }" [errorStateMatcher]="matcher">
         <mat-icon aria-hidden="false">search</mat-icon>
+        <mat-error *ngIf=" !!formS['search'].errors">
+            <mat-error *ngIf="!!formS['search'].errors.required">Este campo es requerido</mat-error>
+            <mat-error *ngIf="!!formS['search'].errors.pattern">Este campo no acepta el @ y el #</mat-error>
+        </mat-error>
     </mat-form-field>
 </form>
 
-<app-cards [items]="tweets"></app-cards>
+<app-cards [scroll]="onScroll()" [items]="miniCard"></app-cards>
+
+<div class="message-error" *ngIf="error">
+    <p>
+        {{this.mensError}}
+    </p>
+</div>

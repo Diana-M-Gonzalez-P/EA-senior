@@ -6,7 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Services
 import { TwitterService } from './services/twitter.service';
 
-
+// libraries
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,6 +17,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,6 +45,8 @@ import { CardsComponent } from './components/cards/cards.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatSnackBarModule,
+    InfiniteScrollModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,

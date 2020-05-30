@@ -1,11 +1,11 @@
+@import '../../../scss/viewport.scss';
+@import '../../../scss/variables.scss';
 .cards {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    mat-card {
-        width: 20%;
-        margin: 0 2rem 2rem 0;
-        flex: 1 1 20%;
+    @include mobile {
+        flex-direction: column;
     }
     &__item {
         .cards__image {
@@ -15,6 +15,36 @@
                 height: auto;
                 margin: auto;
             }
+        }
+    }
+    &__full-text {
+        position: absolute;
+        background: $blue;
+        top: 14rem;
+        left: 0;
+        z-index: -1;
+        border-radius: 4px;
+        padding: 0.8rem;
+        opacity: 0;
+        clear: both;
+        transition: all .2s ease .2s;
+        &.view {
+            z-index: 1;
+            opacity: 1;
+            clear: both;
+        }
+        p {
+            color: $white;
+        }
+    }
+    .favorite {
+        mat-icon {
+            color: $red;
+        }
+    }
+    .share {
+        mat-icon {
+            color: $yellow;
         }
     }
 }

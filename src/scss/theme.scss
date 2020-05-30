@@ -1,1 +1,49 @@
 // Styles modified for Angular Material theme
+@import 'variables.scss';
+@import 'viewport.scss';
+.mat-toolbar {
+    background-color: $blue;
+    .navbar {
+        width: 4rem;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.mat-card {
+    width: 20%;
+    height: 12rem;
+    margin: 0 1rem 1rem 0;
+    flex: 1 1 20%;
+    position: relative;
+    @include mobile {
+        width: calc(100% - 2rem);
+    }
+    .mat-card-header {
+        word-break: break-word;
+    }
+}
+
+button {
+    border: 0;
+    background: transparent;
+    mat-icon {
+        color: $blue;
+    }
+}
+
+.mat-form-field {
+    margin-right: 8px;
+}
+
+.mat-snack-bar-container {
+    color: $white;
+    background: $blue-dark;
+}
+
+.mat-simple-snackbar-action {
+    color: $white;
+    border: 1px solid $white;
+}
