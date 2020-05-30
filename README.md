@@ -1,27 +1,19 @@
 # AppSeniorAranda
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+## Descripción
 
-## Development server
+Esta aplicación esta desarrollada con Angular version 9.1.7. y utiliza el servicio api de Twitter
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Comandos a Ejecutar SERVER
 
-## Code scaffolding
+Los servicios fueron realizados en node, se encuentran en la carpeta llamada `server`. En esta carpeta hay que ejecutar el comando `npm install` y luego `node server.js`, para poner en funcionamiento los servicios. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Comandos a Ejecutar ANGULAR
 
-## Build
+Para ejecutar el proyecto usar el comando `npm install` y luego `ng serve`. En el navegador se coloca la url `http://localhost:4200/` para visualizar la pagina 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Imagenes del proyecto 
+<div align="center">
+  <img src="imageProy/desktop.png" width="600">
+  <img src="imageProy/mobil.png" width="600">
+</div>
